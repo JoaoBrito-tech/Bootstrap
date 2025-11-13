@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contato - Análise de Business Intelligence</title>
+  <meta name="description"
+    content="Entre em contato para saber mais sobre soluções em Análise de Business Intelligence e estratégias baseadas em dados.">
+  <meta name="keywords" content="Business Intelligence, BI, análise de dados, contato, dashboards, insights">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Contato</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="services.html">Formação</a></li>
+          <li><a href="portfolio.html">Certificação</a></li>
+          <li><a href="team.html">Atuação</a></li>
+          <li><a href="blog.html">Créditos</a></li>
+          <li><a href="contact.html" class="active">Contato</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container position-relative">
+        <h1>Fale Conosco</h1>
+        <p>Transforme dados em decisões inteligentes. Entre em contato e descubra como a Análise de Business
+          Intelligence pode impulsionar o desempenho do seu negócio.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Contato</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4"><!-- LINHA ADICIONADA -->
+
+          <!-- Coluna da Avaliação -->
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center text-center"
+              data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-bar-chart-line"></i>
+              <h3>Avalie sua Experiência</h3>
+              <p>Conte-nos como você avalia o impacto da Análise de Business Intelligence em sua organização.</p>
+
+              <form id="avaliacao-form" class="w-100 mt-3">
+                <div class="mb-3">
+                  <label for="nota" class="form-label fw-semibold">De 1 a 5, como você avalia o uso de BI?</label>
+                  <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <div><input type="radio" name="nota" id="nota1" value="1"> <label for="nota1">1</label></div>
+                    <div><input type="radio" name="nota" id="nota2" value="2"> <label for="nota2">2</label></div>
+                    <div><input type="radio" name="nota" id="nota3" value="3"> <label for="nota3">3</label></div>
+                    <div><input type="radio" name="nota" id="nota4" value="4"> <label for="nota4">4</label></div>
+                    <div><input type="radio" name="nota" id="nota5" value="5"> <label for="nota5">5</label></div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="comentario" class="form-label fw-semibold">Deixe um comentário:</label>
+                  <textarea id="comentario" class="form-control" rows="3"
+                    placeholder="Como a análise de dados ajudou seu negócio?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary px-4">Enviar Avaliação</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Coluna do Formulário de Contato -->
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="500">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Seu nome" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Seu e-mail" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Assunto" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Sua mensagem"
+                    required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Enviando...</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
+                  <button type="submit">Enviar mensagem</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+        </div><!-- FIM DA LINHA -->
+
+      </div>
+    </section>
+
+    <!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">ETEC de Hortolândia</strong> <span>Todos os
+          direitos reservados</span></p>
+      <div class="credits">
+        Trabalho acadêmico sem fins lucrativos.
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
