@@ -13,9 +13,18 @@
   <style>
     textarea {
       resize: none !important;
+      /* trava as bordas */
       overflow: auto !important;
+      /* evita "puxar" */
+      max-width: 100% !important;
+      /* largura fixa */
+      min-width: 100% !important;
+      max-height: 150px !important;
+      /* altura fixa */
+      min-height: 150px !important;
     }
   </style>
+
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -138,7 +147,7 @@
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="4" placeholder="Sua mensagem" required></textarea>
+                  <textarea class="form-control" name="message" rows="4" placeholder="Sua mensagem" ></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
