@@ -130,8 +130,14 @@
           <!-- Coluna do Formulário de Contato -->
           <div class="col-lg-6">
             <!-- adicionei novalidate aqui e mantive a classe para que o restante do site continue funcionando -->
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="500" novalidate>
+            <form action="https://formsubmit.co/joaopaulobritodasilva@gmail.com" method="POST" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="500">
+
+              <!-- Configurações do FormSubmit -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://joaobrito-tech.github.io/Bootstrap/contact.html">
+
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -147,19 +153,17 @@
                 </div>
 
                 <div class="col-md-12">
-                  <!-- A textarea NÃO tem 'required' -->
-                  <textarea class="form-control" name="message" rows="4" placeholder="Sua mensagem"></textarea>
+                  <textarea class="form-control" name="message" rows="4"
+                    placeholder="Sua mensagem (opcional)"></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Enviando...</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
                   <button type="submit">Enviar mensagem</button>
                 </div>
 
               </div>
             </form>
+
           </div>
 
         </div>
