@@ -130,8 +130,8 @@
           <!-- Coluna do Formulário de Contato -->
           <div class="col-lg-6">
             <!-- adicionei novalidate aqui e mantive a classe para que o restante do site continue funcionando -->
-            <form action="https://formsubmit.co/joaopaulobritodasilva051@gmail.com" method="POST" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="500">
+            <form action="https://formsubmit.co/joaopaulobritodasilva051@gmail.com" method="POST" class="php-email-form"
+              data-aos="fade-up" data-aos-delay="500" novalidate>
 
               <!-- Configurações do FormSubmit -->
               <input type="hidden" name="_captcha" value="false">
@@ -157,8 +157,14 @@
                     placeholder="Sua mensagem (opcional)"></textarea>
                 </div>
 
-                <div class="col-md-12 text-center">
-                  <button type="submit">Enviar mensagem</button>
+                <div class="col-md-12 text-center d-flex justify-content-center gap-3">
+
+                  <!-- Botão Enviar -->
+                  <button type="submit" class="btn btn-primary px-4">Enviar mensagem</button>
+
+                  <!-- Botão Limpar -->
+                  <button type="reset" class="btn btn-outline-secondary px-4">Limpar</button>
+
                 </div>
 
               </div>
