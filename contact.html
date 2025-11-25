@@ -9,18 +9,13 @@
     content="Entre em contato para saber mais sobre soluções em Análise de Business Intelligence e estratégias baseadas em dados.">
   <meta name="keywords" content="Business Intelligence, BI, análise de dados, contato, dashboards, insights">
 
-  <!-- Impede que textarea aumente de tamanho -->
   <style>
     textarea {
       resize: none !important;
-      /* trava as bordas */
       overflow: auto !important;
-      /* evita "puxar" */
       max-width: 100% !important;
-      /* largura fixa */
       min-width: 100% !important;
       max-height: 150px !important;
-      /* altura fixa */
       min-height: 150px !important;
     }
   </style>
@@ -51,11 +46,9 @@
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center">
         <h1 class="sitename">Contato</h1>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -68,7 +61,6 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
@@ -88,12 +80,10 @@
         </nav>
       </div>
     </div>
-    <!-- End Page Title -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4">
 
           <!-- Coluna da Avaliação -->
@@ -115,13 +105,11 @@
                     <div><input type="radio" name="nota" id="nota5" value="5"> <label for="nota5">5</label></div>
                   </div>
                 </div>
-
                 <div class="mb-3">
                   <label for="comentario" class="form-label fw-semibold">Deixe um comentário:</label>
                   <textarea id="comentario" class="form-control" rows="3"
                     placeholder="Como a análise de dados ajudou seu negócio?"></textarea>
                 </div>
-
                 <button type="submit" class="btn btn-primary px-4">Enviar Avaliação</button>
               </form>
             </div>
@@ -129,97 +117,51 @@
 
           <!-- Coluna do Formulário de Contato -->
           <div class="col-lg-6">
-            <!-- adicionei novalidate aqui e mantive a classe para que o restante do site continue funcionando -->
-            <form action="https://formsubmit.co/joaopaulobritodasilva051@gmail.com" method="get" data-aos="fade-up"
-              data-aos-delay="500" novalidate>
-
-              <!-- Configurações do FormSubmit -->
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_next" value="https://joaobrito-tech.github.io/Bootstrap/contact.html">
+            <!-- versão sem FormSubmit -->
+            <form action="mailto:seuemail@dominio.com" method="post" enctype="text/plain" data-aos="fade-up"
+              data-aos-delay="500">
 
               <div class="row gy-4">
-
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Seu nome" required>
                 </div>
-
                 <div class="col-md-6">
                   <input type="email" class="form-control" name="email" placeholder="Seu e-mail" required>
                 </div>
-
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="subject" placeholder="Assunto" required>
                 </div>
-
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="4"
                     placeholder="Sua mensagem (opcional)"></textarea>
                 </div>
-
                 <div class="col-md-12 text-center d-flex justify-content-center gap-3">
-
                   <button type="submit" class="btn btn-primary px-4">Enviar mensagem</button>
-
                   <button type="reset" class="btn btn-outline-secondary px-4">Limpar</button>
-
                 </div>
-
               </div>
             </form>
-
           </div>
 
         </div>
-
       </div>
     </section>
-
   </main>
 
   <footer id="footer" class="footer dark-background">
     <div class="container copyright text-center mt-4">
-      <p> <strong class="px-1 sitename">João Paulo Brito</strong><span>2025 @ Todos os
-          direitos reservados</span></p>
-      <div class="credits">
-        Trabalho acadêmico sem fins lucrativos.
-      </div>
+      <p><strong class="px-1 sitename">João Paulo Brito</strong><span>2025 @ Todos os direitos reservados</span></p>
+      <div class="credits">Trabalho acadêmico sem fins lucrativos.</div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Script que garante que a textarea "message" NÃO seja tratada como required por validações JS.
-       Colocado ANTES do validate.js para rodar na fase de captura e remover atributos antes do validador. -->
-  <script>
-    (function () {
-      // localiza o formulário — usa delegação caso haja mais de um
-      function ensureOptionalMessage(ev) {
-        var form = document.querySelector('.php-email-form');
-        if (!form) return;
-        // remove atributo required da textarea antes que qualquer validador execute
-        var msg = form.querySelector('textarea[name="message"]');
-        if (msg) msg.removeAttribute('required');
-      }
-
-      // atacha no capture para rodar antes de handlers em bubble
-      document.addEventListener('submit', function (e) {
-        try { ensureOptionalMessage(e); } catch (err) { /* fail quietly */ }
-      }, true);
-    })();
-  </script>
-
-  <!-- Se existir, esse é o validador que normalmente busca por 'required' -->
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -227,8 +169,6 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
