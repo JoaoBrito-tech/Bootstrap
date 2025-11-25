@@ -20,25 +20,21 @@
     }
   </style>
 
-  <!-- Favicons -->
   <link href="assets/img/logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
@@ -56,8 +52,14 @@
           <li><a href="services.html">Formação</a></li>
           <li><a href="portfolio.html">Certificação</a></li>
           <li><a href="team.html">Atuação</a></li>
-          <li><a href="blog.html">Créditos</a></li>
-          <li><a href="contact.html" class="active">Contato</a></li>
+          <!-- Item de menu "Créditos" transformado em dropdown -->
+          <li class="dropdown"><a href="#"><span>Créditos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="blog.html">Desenvolvedores</a></li>
+              <li><a href="bibliografia.html" class="active">Bibliografia</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contato</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -66,7 +68,6 @@
 
   <main class="main">
 
-    <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container position-relative">
         <h1>Fale Conosco</h1>
@@ -81,12 +82,10 @@
       </div>
     </div>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
 
-          <!-- Coluna da Avaliação -->
           <div class="col-lg-6">
             <div class="info-item d-flex flex-column justify-content-center align-items-center text-center"
               data-aos="fade-up" data-aos-delay="200">
@@ -98,7 +97,8 @@
                 <div class="mb-3">
                   <label for="nota" class="form-label fw-semibold">De 1 a 5, como você avalia o uso de BI?</label>
                   <div class="d-flex justify-content-center gap-3 flex-wrap">
-                    <div><input type="radio" name="nota" id="nota1" value="1"> <label for="nota1">1</label></div>
+                    <div><input type="radio" name="nota" id="nota1" value="1" required> <label for="nota1">1</label>
+                    </div>
                     <div><input type="radio" name="nota" id="nota2" value="2"> <label for="nota2">2</label></div>
                     <div><input type="radio" name="nota" id="nota3" value="3"> <label for="nota3">3</label></div>
                     <div><input type="radio" name="nota" id="nota4" value="4"> <label for="nota4">4</label></div>
@@ -108,28 +108,34 @@
                 <div class="mb-3">
                   <label for="comentario" class="form-label fw-semibold">Deixe um comentário:</label>
                   <textarea id="comentario" class="form-control" rows="3"
-                    placeholder="Como a análise de dados ajudou seu negócio?"></textarea>
+                    placeholder="Como a análise de dados ajudou seu negócio?" name="comentario"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary px-4">Enviar Avaliação</button>
+                <button type="button" class="btn btn-primary px-4">Enviar Avaliação</button>
               </form>
             </div>
           </div>
 
-          <!-- Coluna do Formulário de Contato -->
           <div class="col-lg-6">
-            <!-- versão sem FormSubmit -->
-            <form action="mailto:seuemail@dominio.com" method="post" enctype="text/plain" data-aos="fade-up"
-              data-aos-delay="500">
+            <form action="#" method="post" class="needs-validation" novalidate data-aos="fade-up" data-aos-delay="500">
 
               <div class="row gy-4">
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Seu nome" required>
+                  <div class="invalid-feedback">
+                    Por favor, insira seu nome.
+                  </div>
                 </div>
                 <div class="col-md-6">
                   <input type="email" class="form-control" name="email" placeholder="Seu e-mail" required>
+                  <div class="invalid-feedback">
+                    Por favor, insira um e-mail válido.
+                  </div>
                 </div>
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="subject" placeholder="Assunto" required>
+                  <div class="invalid-feedback">
+                    Por favor, insira o assunto.
+                  </div>
                 </div>
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="4"
@@ -160,7 +166,6 @@
   </a>
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -171,6 +176,28 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
 
+  <script>
+    (function () {
+      'use strict'
+      var forms = document.querySelectorAll('.needs-validation')
+
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            } else {
+
+              event.preventDefault();
+              alert("Formulário enviado!");
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
 </body>
 
 </html>
